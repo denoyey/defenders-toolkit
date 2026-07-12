@@ -2,6 +2,8 @@
 
 **Blue Team Security Auditing Toolkit - Enterprise**
 
+![Preview Tools](img/preview-tools.png)
+
 Defenders Toolkit adalah kerangka kerja audit keamanan komprehensif dan *asynchronous* yang dibangun menggunakan Python. Dirancang untuk *Blue Team* dan profesional keamanan, alat ini mengotomatiskan pencarian kerentanan web umum, kesalahan konfigurasi, dan eksposur data sensitif.
 
 ## 🚀 Fitur
@@ -18,12 +20,18 @@ Toolkit saat ini mengekspos modul inti berikut melalui CLI-nya:
 
 - **OSINT Subdomain Enumerator**
   Mengekstrak subdomain dari log Certificate Transparency (`crt.sh`) untuk pemetaan permukaan serangan (*attack surface mapping*).
+- **WAF Origin IP Discovery**
+  Melacak IP asli server di balik WAF menggunakan DNS History dan Shodan InternetDB (OSINT).
 - **Enterprise Sensitive Exposure Scanner**
   Melakukan pemindaian *asynchronous* menggunakan daftar kata (wordlist) dinamis, mekanisme anti-WAF, dan pelaporan JSON untuk menemukan file sensitif yang terekspos.
 - **GraphQL Introspection Scanner**
   Mendeteksi *endpoint* GraphQL dan menguji kebocoran skema melalui kueri Introspection.
 - **Cloud S3 & Subdomain Takeover Scanner**
   Mengidentifikasi *bucket* AWS S3 dan GCP dengan kesalahan konfigurasi yang dapat diakses oleh publik.
+- **Frontend JS Secrets & API Key Harvester**
+  Mengekstrak dan memindai file JavaScript untuk *hardcoded credentials*.
+- **SBOM & CVE Analyzer**
+  Mengekstrak package.json dan memvalidasi komponen terhadap OSV API untuk mencari kerentanan (CVE).
 
 *(Catatan: Direktori `modules/` berisi banyak pemindai lain seperti pemeriksa JWT, penganalisis CORS, pemindai kebocoran konfigurasi, dll., yang dapat diintegrasikan sesuai kebutuhan.)*
 
