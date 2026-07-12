@@ -9,7 +9,7 @@ from datetime import datetime
 class HTMLReportGenerator:
     def __init__(self):
         self.reports_dir = os.path.join(os.getcwd(), "reports")
-        self.dashboard_path = os.path.join(os.getcwd(), "dashboard.html")
+        self.dashboard_path = os.path.join(os.getcwd(), "reports/dashboard.html")
 
     def generate(self):
         if not os.path.exists(self.reports_dir):

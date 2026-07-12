@@ -12,6 +12,7 @@ from modules.cloud_bucket_scanner import CloudBucketScanner
 from modules.subdomain_enum import SubdomainEnumerator
 from modules.js_secrets_scanner import JSSecretsScanner
 from modules.sbom_cve_analyzer import SBOMCVEAnalyzer
+from modules.waf_origin_discovery import WAFOriginDiscovery
 from core.html_generator import HTMLReportGenerator
 
 class Color:
@@ -27,6 +28,7 @@ class CLIMenu:
     def __init__(self):
         self.modules = [
             SubdomainEnumerator(),
+            WAFOriginDiscovery(),
             SensitiveFileScanner(),
             GraphQLScanner(),
             CloudBucketScanner(),
