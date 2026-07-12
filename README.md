@@ -2,34 +2,34 @@
 
 **Blue Team Security Auditing Toolkit - Enterprise**
 
-Defenders Toolkit is a comprehensive and asynchronous security auditing framework built in Python. Designed for Blue Teams and security professionals, it automates the discovery of common web vulnerabilities, misconfigurations, and sensitive data exposures.
+Defenders Toolkit adalah kerangka kerja audit keamanan komprehensif dan *asynchronous* yang dibangun menggunakan Python. Dirancang untuk *Blue Team* dan profesional keamanan, alat ini mengotomatiskan pencarian kerentanan web umum, kesalahan konfigurasi, dan eksposur data sensitif.
 
-## 🚀 Features
+## 🚀 Fitur
 
-- **Asynchronous Execution:** Built on top of `asyncio` and `aiohttp` for lightning-fast and non-blocking security checks.
-- **Modular Architecture:** Easily extensible with various scanning modules.
-- **Interactive CLI:** A user-friendly, color-coded Command Line Interface.
-- **HTML Dashboard Reporting:** Automatically generates beautiful HTML reports for your findings.
-- **Global Authentication:** Supports injecting Bearer tokens or Cookie strings globally across all modules for authenticated testing.
+- **Eksekusi Asynchronous:** Dibangun di atas `asyncio` dan `aiohttp` untuk pemeriksaan keamanan non-blokir yang sangat cepat.
+- **Arsitektur Modular:** Mudah diperluas dengan berbagai modul pemindaian.
+- **CLI Interaktif:** Antarmuka baris perintah yang ramah pengguna dengan kode warna.
+- **Pelaporan HTML Dashboard:** Secara otomatis menghasilkan laporan HTML yang menarik untuk temuan Anda.
+- **Otentikasi Global:** Mendukung injeksi token Bearer atau *string Cookie* secara global di seluruh modul untuk pengujian terotentikasi.
 
-## 🧩 Included Modules
+## 🧩 Modul yang Disertakan
 
-The toolkit currently exposes the following core modules through its CLI:
+Toolkit saat ini mengekspos modul inti berikut melalui CLI-nya:
 
 - **OSINT Subdomain Enumerator**
-  Extracts subdomains from Certificate Transparency logs (`crt.sh`) for attack surface mapping.
+  Mengekstrak subdomain dari log Certificate Transparency (`crt.sh`) untuk pemetaan permukaan serangan (*attack surface mapping*).
 - **Enterprise Sensitive Exposure Scanner**
-  Performs asynchronous scanning using dynamic wordlists, anti-WAF mechanisms, and JSON reporting to find exposed sensitive files.
+  Melakukan pemindaian *asynchronous* menggunakan daftar kata (wordlist) dinamis, mekanisme anti-WAF, dan pelaporan JSON untuk menemukan file sensitif yang terekspos.
 - **GraphQL Introspection Scanner**
-  Detects GraphQL endpoints and tests for schema leakage via Introspection queries.
+  Mendeteksi *endpoint* GraphQL dan menguji kebocoran skema melalui kueri Introspection.
 - **Cloud S3 & Subdomain Takeover Scanner**
-  Identifies misconfigured AWS S3 and GCP buckets that are publicly accessible.
+  Mengidentifikasi *bucket* AWS S3 dan GCP dengan kesalahan konfigurasi yang dapat diakses oleh publik.
 
-*(Note: The `modules/` directory contains many other scanners like JWT inspector, CORS analyzer, Config leak scanner, etc., which can be integrated as needed.)*
+*(Catatan: Direktori `modules/` berisi banyak pemindai lain seperti pemeriksa JWT, penganalisis CORS, pemindai kebocoran konfigurasi, dll., yang dapat diintegrasikan sesuai kebutuhan.)*
 
-## 🛠️ Installation
+## 🛠️ Instalasi
 
-Ensure you have **Python 3.8+** installed.
+Pastikan Anda memiliki **Python 3.8+** terinstal.
 
 ```bash
 git clone https://github.com/denoyey/defenders-toolkit.git
@@ -39,26 +39,26 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-*Defenders Toolkit will automatically verify and install the required dependencies (from `requirements.txt`) upon its first run.*
+*Defenders Toolkit akan memverifikasi dan menginstal dependensi yang diperlukan secara otomatis (dari `requirements.txt`) pada saat pertama kali dijalankan.*
 
-## 💻 Usage
+## 💻 Penggunaan
 
-Start the interactive toolkit by running:
+Mulai toolkit interaktif dengan menjalankan:
 
 ```bash
 python3 main.py
 ```
 
-Once the CLI is running, you can:
-1. **Select a module** by entering its corresponding number.
-2. **Input your target** URL or domain when prompted.
-3. Use the `[A]` option to set a global **Bearer Token or Cookie** if the target requires authentication.
-4. Use the `[R]` option to generate a beautiful **HTML Dashboard** compiling all your scan reports.
+Setelah CLI berjalan, Anda dapat:
+1. **Memilih modul** dengan memasukkan nomor yang sesuai.
+2. **Memasukkan target** URL atau domain Anda saat diminta.
+3. Menggunakan opsi `[A]` untuk mengatur **Token Bearer atau Cookie** global jika target memerlukan otentikasi.
+4. Menggunakan opsi `[R]` untuk menghasilkan **Dashboard HTML** interaktif yang mengkompilasi semua laporan pemindaian Anda.
 
-## ⚠️ Disclaimer
+## ⚠️ Penafian (Disclaimer)
 
-This toolkit is developed for educational and professional security auditing purposes only. **Ensure you have explicit permission** to test the target systems before running any scans. The developers assume no liability and are not responsible for any misuse or damage caused by this program.
+Toolkit ini dikembangkan untuk tujuan pendidikan dan audit keamanan profesional saja. **Pastikan Anda memiliki izin eksplisit** untuk menguji sistem target sebelum menjalankan pemindaian apa pun. Pengembang tidak menanggung kewajiban dan tidak bertanggung jawab atas penyalahgunaan atau kerusakan yang disebabkan oleh program ini.
 
 ---
-**Copyright (c) 2026 Defenders Toolkit**
-**All Rights Reserved.**
+**Hak Cipta (c) 2026 Defenders Toolkit**
+**Seluruh Hak Cipta.**
