@@ -11,6 +11,7 @@ from modules.graphql_scanner import GraphQLScanner
 from modules.cloud_bucket_scanner import CloudBucketScanner
 from modules.subdomain_enum import SubdomainEnumerator
 from modules.js_secrets_scanner import JSSecretsScanner
+from modules.sbom_cve_analyzer import SBOMCVEAnalyzer
 from core.html_generator import HTMLReportGenerator
 
 class Color:
@@ -29,7 +30,8 @@ class CLIMenu:
             SensitiveFileScanner(),
             GraphQLScanner(),
             CloudBucketScanner(),
-            JSSecretsScanner()
+            JSSecretsScanner(),
+            SBOMCVEAnalyzer()
         ]
         self.current_auth = "None"
         self.html_gen = HTMLReportGenerator()
